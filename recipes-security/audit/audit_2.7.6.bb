@@ -72,6 +72,7 @@ RDEPENDS_auditd += "bash"
 do_install_append() {
 	rm -f ${D}/${libdir}/python${PYTHON_BASEVERSION}/site-packages/*.a
 	rm -f ${D}/${libdir}/python${PYTHON_BASEVERSION}/site-packages/*.la
+	rm -Rf ${D}/${libdir}/golang/
 
 	# reuse auditd config
 	[ ! -e ${D}/etc/default ] && mkdir ${D}/etc/default
